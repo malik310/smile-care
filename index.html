@@ -14,13 +14,15 @@
     <!-- Preload critical hero image (LCP element) so browser fetches it ASAP -->
     <link rel="preload" as="image" href="clinic-interior.png" fetchpriority="high">
 
-    <!-- Async-load fonts — won't block render -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"></noscript>
+    <!-- Preconnect for fast font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Async-load full stylesheet — first paint won't block on this -->
-    <link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    <!-- Fonts load synchronously but preconnect reduces latency -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap">
+
+    <!-- Full stylesheet — synchronous (12KB, fast) -->
+    <link rel="stylesheet" href="styles.css">
 
     <!-- CRITICAL CSS: Inlined above-the-fold styles for instant first paint -->
     <style>

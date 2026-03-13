@@ -11,50 +11,11 @@
     <meta property="og:description" content="SmileCare Dental offers gentle, modern family dentistry in F-10 Islamabad.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://malik310.github.io/smile-care/">
-    <!-- Preload critical hero image (LCP element) so browser fetches it ASAP -->
-    <link rel="preload" as="image" href="clinic-interior.png" fetchpriority="high">
-
     <!-- Preconnect for fast font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Fonts load synchronously but preconnect reduces latency -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap">
-
-    <!-- Full stylesheet — synchronous (12KB, fast) -->
     <link rel="stylesheet" href="styles.css">
-
-    <!-- CRITICAL CSS: Inlined above-the-fold styles for instant first paint -->
-    <style>
-      :root{--primary:#0D7377;--accent:#14A098;--text:#1A1A2E;--white:#FFFFFF;--border:#E5E5E5}
-      *{margin:0;padding:0;box-sizing:border-box}
-      html{scroll-behavior:smooth;scroll-padding-top:70px}
-      body{font-family:'Inter',system-ui,sans-serif;color:var(--text);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
-      a{text-decoration:none;color:inherit}
-      .container{max-width:1200px;margin:0 auto;padding:0 24px}
-      .site-header{position:fixed;top:0;left:0;width:100%;height:70px;background:#fff;border-bottom:1px solid var(--border);z-index:1000;display:flex;align-items:center}
-      .header-container{display:flex;justify-content:space-between;align-items:center;width:100%}
-      .logo a{position:relative;font-size:26px;font-weight:800;color:var(--primary);display:inline-block;padding-bottom:8px;letter-spacing:-1px}
-      .logo-smile{position:absolute;bottom:0;left:0;width:100%;height:18px;color:var(--accent)}
-      .nav-links{display:flex;gap:32px;list-style:none}
-      .nav-links a{font-size:16px;font-weight:700;color:var(--text)}
-      .nav-links a.active,.nav-links a:hover{color:var(--primary)}
-      .header-cta{display:flex;align-items:center;gap:16px}
-      .mobile-menu-btn{display:none;background:none;border:none;color:var(--primary);cursor:pointer}
-      .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 28px;border-radius:50px;font-weight:700;font-size:16px;cursor:pointer;border:none;transition:transform .2s,background-color .2s,color .2s}
-      .btn-primary{background:var(--primary);color:#fff}
-      .btn-large{padding:16px 36px;font-size:18px}
-      .btn-secondary-light{background:transparent;color:#fff;border:2px solid #fff}
-      main{margin-top:70px}
-      .hero-bg{min-height:85vh;display:flex;align-items:center;justify-content:center;background-image:linear-gradient(rgba(13,115,119,.8),rgba(26,26,46,.7)),url('clinic-interior.png');background-size:cover;background-position:center;background-attachment:scroll;text-align:center;color:#fff;padding:100px 0}
-      .hero-content-centered{max-width:800px;margin:0 auto}
-      .hero-content-centered h1{font-size:64px;color:#fff;margin-bottom:24px;line-height:1.1;letter-spacing:-.5px}
-      .hero-content-centered p{font-size:20px;color:#f0f0f0;margin-bottom:40px}
-      .hero-btns.justify-center{justify-content:center;display:flex;gap:16px;flex-wrap:wrap}
-      .label{display:inline-block;text-transform:uppercase;letter-spacing:2px;color:var(--primary);font-size:12px;font-weight:700;margin-bottom:12px}
-      .label-light{color:var(--accent);background:rgba(255,255,255,.1);padding:4px 12px;border-radius:20px}
-      @media(max-width:768px){.nav-links{position:absolute;top:70px;left:0;width:100%;background:#fff;flex-direction:column;padding:0 24px;max-height:0;overflow:hidden;opacity:0;transition:max-height .3s ease,opacity .3s ease,padding .3s ease;box-shadow:0 4px 6px rgba(0,0,0,.05);border-bottom:1px solid var(--border)}.nav-links.active{max-height:400px;opacity:1;padding:24px}.header-cta .btn{display:none}.mobile-menu-btn{display:block}.hero-content-centered h1{font-size:38px}}
-    </style>
 </head>
 <body>
 

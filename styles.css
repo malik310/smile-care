@@ -260,8 +260,8 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Local image — avoids cross-origin latency that tanks LCP */
-  background-image: linear-gradient(rgba(13, 115, 119, 0.8), rgba(26, 26, 46, 0.7)), url('clinic-interior.png');
+  /* Unsplash CDN serves optimized WebP (~150KB) vs our local 600KB PNG */
+  background-image: linear-gradient(rgba(13, 115, 119, 0.8), rgba(26, 26, 46, 0.7)), url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1280&q=75');
   background-size: cover;
   background-position: center;
   background-attachment: scroll;

@@ -1,0 +1,121 @@
+🦷 Professional Prompt: SmileCare Dental — Premium Dental Clinic Website
+Project Goal: Design a high-conversion, trust-building website for SmileCare Dental, a modern family dental clinic in F-10 Markaz, Islamabad. The site must feel premium, medically professional yet approachable, fully responsive, and optimized for mobile booking conversions.
+Brand Identity & Style:
+Clinic Name: SmileCare Dental
+Aesthetic: Clean, clinical trust meets warm accessibility. Medical precision without coldness. Think: white space, soft shadows, subtle gradients, rounded but not playful.
+Primary Colors:
+Primary: #0D7377 (Deep Teal — medical trust, modern)
+Accent: #14A098 (Bright Teal — CTAs, highlights)
+Neutral: #F5F5F5 (Soft Gray backgrounds)
+Text: #1A1A2E (Near-black for readability)
+White: #FFFFFF (Clean sections)
+Typography:
+Headlines: Inter or similar geometric sans-serif, bold weight (700)
+Body: Inter regular (400) or system-ui
+No serif fonts, no decorative scripts
+I. Structural & Technical Requirements
+Technology: Clean semantic HTML5, modern CSS (Flexbox/Grid, CSS variables), vanilla JS for interactions only where necessary.
+Design System (CRITICAL — no generic buttons):
+Buttons: Pill-shaped (border-radius: 50px), solid teal background, white text, subtle hover lift (transform: translateY(-2px)), no gradients, no shadows on default state, minimal shadow on hover.
+Cards: White background, 1px solid #E5E5E5 border, border-radius: 16px, no heavy shadows (use subtle box-shadow: 0 4px 6px rgba(0,0,0,0.05)), clean padding.
+Inputs: Same border-radius as buttons (50px), light gray border, focus state with teal border, no outline.
+Spacing: Generous whitespace. Sections separated by 80-120px. No cramped layouts.
+SEO & Speed: WebP images, lazy loading, semantic headings, alt tags.
+Output: Separate files: index.html, styles.css, script.js
+II. Header & Navigation
+Structure: Fixed header, white background, subtle bottom border (1px #E5E5E5), height: 70px.
+Logo: "SmileCare" wordmark left-aligned. Simple, no dental tooth icon in logo (too cliché), maybe a subtle abstract smile curve if needed.
+Navigation Links (center or right):
+Home
+Services
+Our Team
+Patient Reviews
+Contact
+CTA (top right): "Book Appointment" — pill button, teal background, white text.
+III. Hero Section
+Layout: Two-column on desktop (60/40), stacked on mobile. No full-screen height — compact, scannable.
+Left column:
+Small label above headline: "FAMILY DENTISTRY IN ISLAMABAD" — uppercase, letter-spacing: 2px, teal color, 12px font.
+Headline: "Gentle Dental Care for Your Family" — 48px desktop, 32px mobile, bold, dark text.
+Subheadline: "12+ years of trusted service. Modern equipment. Pain-free procedures. Book your consultation today." — 18px, gray text, max-width 500px.
+CTAs side by side:
+Primary: "Book via WhatsApp" — teal pill button
+Secondary: "Call (051) 123-4567" — transparent pill, teal border, teal text
+Right column:
+Professional image: Female dentist in modern clinic, warm smile, patient in chair (or clinic interior). Not stock-photo cheesy. Real, warm, trustworthy.
+No image zoom animations. No parallax. Clean, static, fast.
+IV. Main Content Sections
+1. Services (Icon Grid)
+Title: "Our Services" — centered, 36px, bold.
+3-column grid on desktop, 1-column mobile.
+Each service card:
+Icon: Simple line icon (SVG), teal color, 48px
+Title: 20px, bold, dark
+Description: 14px, gray, 2 lines max
+Services:
+General Dentistry (checkups, cleanings)
+Cosmetic Dentistry (whitening, veneers)
+Orthodontics (braces, aligners)
+Dental Implants
+Root Canal Treatment
+Emergency Care
+2. Dr. Ayesha Khan (Team Section)
+Layout: Two-column. Photo left, content right.
+Photo: Professional headshot, circular crop (border-radius: 50%), subtle border (4px solid teal), 300px size.
+Content:
+Label: "LEAD DENTIST" — uppercase, teal, small
+Name: "Dr. Ayesha Khan"
+Credentials: "BDS, FCPS | 12+ Years Experience | Formerly Shifa International Hospital"
+Bio: 2-3 sentences about patient-centered care, continuing education, gentle approach.
+CTA: "Meet the Team" — secondary button style.
+3. Why Choose Us (Trust Section)
+4-column grid, no cards — just icons + text, centered.
+Modern Equipment (icon: device/monitor)
+Sterilized Environment (icon: shield/check)
+Easy Parking in F-10 (icon: car)
+WhatsApp Reminders (icon: message)
+4. Patient Reviews
+3 cards in a row. Each card:
+Quote: "Finally a dentist who explains everything before starting."
+Name: "— Sarah M., F-11"
+Stars: 5 teal stars
+5. Location & Hours
+Full-width section, light gray background (#F5F5F5).
+Two columns:
+Left: Google Maps embed (static image placeholder if no API key)
+Right:
+Address: "Shop #12, F-10 Markaz, Islamabad"
+Hours: Mon-Sat 10am-8pm, Sunday by appointment
+Phone: (051) 123-4567
+WhatsApp: [icon] +92 300 1234567
+V. Sticky WhatsApp Button
+Bottom right corner. Teal circle, white WhatsApp icon, 60px diameter. Hover: slight scale (1.1).
+Link: https://wa.me/923001234567?text=Hi%20SmileCare,%20I'd%20like%20to%20book%20an%20appointment
+VI. Footer
+Dark teal background (#0D7377), white text.
+Content:
+Logo left
+Quick links center: Home, Services, Team, Contact
+Social icons right: Instagram, Facebook
+Copyright: "© 2025 SmileCare Dental. All rights reserved."
+CRITICAL INSTRUCTIONS FOR AI:
+NO gradient buttons
+NO box shadows on everything
+NO rounded corners smaller than 8px or larger than 50px (except circles)
+NO serif fonts
+NO stock photo smiles that look fake
+NO carousel/slider in hero
+NO hamburger menu on desktop
+NO more than 2 font sizes per section
+NO decorative background patterns (dots, waves, etc.)
+Design references: Look at modern SaaS landing pages (Linear, Vercel, Notion) for spacing and simplicity, but adapted for medical trust.
+Images: Use copyright-free images from Unsplash or Pexels. Search terms:
+"modern dental clinic interior"
+"female dentist professional portrait"
+"dental patient smiling"
+"dental equipment modern"
+"islamabad clinic exterior"
+All images must be high-resolution, realistic, professionally lit. and appropriate ratio.
+
+
+

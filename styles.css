@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+/* Inter font is loaded via HTML <link> for better performance */
 
 :root {
   --primary: #0D7377; /* Deep Teal */
@@ -264,7 +264,7 @@ textarea {
   background-image: linear-gradient(rgba(13, 115, 119, 0.8), rgba(26, 26, 46, 0.7)), url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll; /* 'fixed' is a mobile paint killer — use scroll */
   text-align: center;
   color: var(--white);
   padding: 100px 0;

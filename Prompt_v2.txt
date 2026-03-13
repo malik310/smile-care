@@ -1,0 +1,246 @@
+🦷 SmileCare Dental — Premium Dental Clinic Website (Improved Prompt v2.0)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PROJECT GOAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Design a high-conversion, trust-building, multi-page website for SmileCare Dental, a modern family dental
+clinic in F-10 Markaz, Islamabad. The site must feel premium, medically professional yet approachable,
+fully responsive, and optimized for mobile booking conversions.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BRAND IDENTITY & STYLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Clinic Name: SmileCare Dental
+
+Aesthetic: Clean, clinical trust meets warm accessibility. Medical precision without coldness.
+Think: white space, soft shadows, subtle gradients, rounded but not playful.
+
+Primary Colors:
+  Primary:  #0D7377  (Deep Teal — medical trust, modern)
+  Accent:   #14A098  (Bright Teal — CTAs, highlights)
+  Neutral:  #F5F5F5  (Soft Gray backgrounds)
+  Text:     #1A1A2E  (Near-black for readability)
+  White:    #FFFFFF  (Clean sections)
+  Border:   #E5E5E5  (Light gray borders)
+
+Typography:
+  Headlines: Inter, bold weight (700-800). Load via HTML <link> tag with preconnect for performance.
+  Body: Inter regular (400) or system-ui
+  No serif fonts, no decorative scripts
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+I. STRUCTURAL & TECHNICAL REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Technology: Clean semantic HTML5, modern CSS (Flexbox/Grid, CSS variables), vanilla JS for
+interactions only where necessary.
+
+Output files (MINIMUM — do not combine into one file):
+  - index.html      (Home page)
+  - services.html   (Full Services page)
+  - team.html       (Our Team page)
+  - contact.html    (Contact page with form)
+  - success.html    (Form submission confirmation page)
+  - styles.css      (Global shared stylesheet)
+  - script.js       (Shared JS for interactivity)
+
+Design System (CRITICAL):
+  Buttons: Pill-shaped (border-radius: 50px), solid teal background, white text,
+           hover lift (transform: translateY(-2px)), no gradients on default.
+  Cards:   White background, 1px solid #E5E5E5, border-radius: 16px,
+           subtle box-shadow: 0 4px 6px rgba(0,0,0,0.05), clean padding.
+  Inputs:  border-radius: 12px (NOT the full 50px pill), light gray border,
+           focus state with teal border, no outline.
+  Spacing: Generous whitespace. Sections separated by 80-120px. No cramped layouts.
+
+Performance (CRITICAL — affects PageSpeed score):
+  - Load Google Fonts via HTML <link> with rel="preconnect" (NOT @import in CSS).
+  - All images must have explicit width and height attributes to prevent layout shift (CLS).
+  - Do NOT use background-attachment: fixed — this kills mobile GPU performance.
+    Use background-attachment: scroll instead.
+  - Lazy-load all below-the-fold images (loading="lazy").
+  - Hero background image should use a teal gradient overlay + background image URL.
+
+SEO (ALL pages must include):
+  - <meta name="description"> — unique, keyword-rich, max 160 characters.
+  - <meta name="robots" content="index, follow">
+  - <link rel="canonical" href="...">
+  - Open Graph tags: og:title, og:description, og:type, og:url
+  - Semantic HTML5 structure: one <h1> per page, with proper h2/h3 hierarchy.
+  - Descriptive alt text on all images.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+II. GLOBAL HEADER & NAVIGATION (shared on all pages)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Fixed header, white background, 1px #E5E5E5 bottom border, height: 70px.
+- Use scroll-padding-top: 70px on <html> to account for fixed header when scrolling to anchors.
+- Add html { scroll-behavior: smooth } for smooth anchor scrolling.
+
+Logo (IMPORTANT — detailed spec):
+  Do NOT use a dental tooth emoji or a regular emoji circle face in the logo.
+  The logo should be the wordmark "SmileCare" (text only), styled as two parts:
+    - "Smile" in the primary teal color
+    - "Care" in the accent teal color
+  Below the text, place an Amazon-style curved SVG smile arrow that:
+    - Spans the full width of the wordmark
+    - Curves gently from left to right with a small arrowhead tip on the right end
+    - Is absolutely positioned below the text using position: relative on the anchor
+      and position: absolute; bottom: 0; left: 0; width: 100% on the SVG
+    - Uses the accent teal color (#14A098)
+  Example SVG for the smile: viewBox="0 0 100 24"
+    <path d="M 5,8 Q 50,28 95,8" stroke="currentColor" .../>
+    <path d="M 85,3 L 95,8 L 88,17" stroke="currentColor" .../> (arrowhead)
+  The footer logo uses the same structure but inherits white color.
+
+Navigation Links:
+  Home | Services | Our Team | Patient Reviews | Contact
+  Active page link should be highlighted with teal color.
+  On mobile: hamburger menu toggle with smooth max-height + opacity CSS transition animation
+             (NOT display:none/flex toggle — that has no animation).
+
+CTA (top right): "Book Appointment" — pill button, teal, white text.
+  On mobile: hide the CTA button, only show hamburger toggle.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+III. HOME PAGE (index.html) — Multiple Long Sections Required
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+The home page MUST be content-rich and long. It should include ALL of the following sections:
+
+1. HERO SECTION (Full-screen / tall, not compact)
+   - Full-screen height (min-height: 85vh), NOT the original two-column compact layout.
+   - Background: deep teal gradient overlay on a real clinic interior photo.
+     Use: background-image: linear-gradient(rgba(13, 115, 119, 0.8), rgba(26, 26, 46, 0.7)), url('...')
+     Use: background-attachment: scroll (never "fixed" on mobile)
+   - Text centered on the overlay.
+   - Large headline: 64px desktop, 38px mobile.
+   - Subheadline, then TWO CTA buttons side by side (centered):
+       Primary: "Book Appointment" (WhatsApp link)
+       Secondary: "Call (051) 123-4567" (tel: link) — transparent pill, white border
+   - Hero image: generate a realistic, professional dental clinic interior image if needed.
+     DO NOT rely solely on Unsplash URLs that may fail.
+
+2. ABOUT US SECTION
+   - Two-column grid: left = clinic interior image, right = intro text about the clinic & Dr. Ayesha.
+   - CTA: "Meet Our Expert Team" linking to team.html
+
+3. SERVICES PREVIEW SECTION
+   - Show top 3 services as cards with icon + title + short description.
+   - CTA: "View All Services" linking to services.html
+
+4. WHY CHOOSE US (Trust Icons)
+   - 4-column trust grid (icons + text, no cards).
+   - Modern Equipment | Sterilized Environment | Easy Parking | WhatsApp Reminders
+
+5. PATIENT REVIEWS
+   - 3 review cards in a row.
+
+6. FAQ SECTION
+   - 3 FAQs, text-based, max-width 800px centered.
+
+7. PRE-FOOTER CTA BANNER
+   - Deep teal background, white text, large headline + CTA button.
+
+8. LOCATION & HOURS
+   - Two-column: Google Maps embed left, contact details right.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+IV. SERVICES PAGE (services.html)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Full 6-service grid (3-column desktop, 1-column mobile).
+- Each card: SVG icon (line, teal, 48px) + bold title + 2-line description.
+- The <h1> on this page should be "Our Services".
+
+Services list:
+  General Dentistry | Cosmetic Dentistry | Orthodontics
+  Dental Implants | Root Canal Treatment | Emergency Care
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+V. TEAM PAGE (team.html)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Two-column: circular photo left (300px, teal border), content right.
+- Label: "LEAD DENTIST" | Name: "Dr. Ayesha Khan"
+- Credentials: BDS, FCPS | 12+ Years | Formerly Shifa International Hospital
+- Bio: 2-3 patient-centered sentences.
+- CTA: "Contact Dr. Ayesha" → links to contact.html (NOT a hash anchor on index.html)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VI. CONTACT PAGE (contact.html)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Two-column: contact form left, contact details + Google Maps right.
+- Form fields: Full Name, Email, Phone Number, Message (textarea).
+- Form must be set up for Netlify Forms with data-netlify="true" and action="/success.html".
+- On successful submission, redirect to success.html.
+- All "Contact" nav/footer links across ALL pages must point to contact.html.
+  Do NOT use index.html#contact as the contact link anywhere.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VII. SUCCESS PAGE (success.html)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Simple confirmation page shown after form submission.
+- Centered large checkmark SVG (teal), thank-you heading, short message, "Return to Homepage" button.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VIII. STICKY WHATSAPP BUTTON (all pages)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Fixed, bottom-right, teal circle, 60px, white WhatsApp SVG icon.
+- Hover: scale(1.1). z-index: 1000. Present on every page.
+- Link: https://wa.me/923001234567?text=Hi%20SmileCare,%20I'd%20like%20to%20book%20an%20appointment
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+IX. FOOTER (shared on all pages)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Dark teal background (#0D7377), white text.
+- 3-column grid: Logo left | Quick links center | Social icons right.
+- Quick links: Home, Services, Team, Contact — all pointing to their respective .html pages.
+- Social: Instagram, Facebook (SVG icons, white).
+- Copyright: Use JavaScript to set the year dynamically:
+    <p>© <span id="current-year"></span> SmileCare Dental. All rights reserved.</p>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  DO NOT hardcode the year as a number (e.g. "2025").
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+X. JAVASCRIPT (script.js)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Mobile hamburger menu: toggle class ".active" on .nav-links on button click.
+- Active nav link: auto-detect current page from URL and apply "active" class.
+- Dynamic year: set #current-year to new Date().getFullYear() on DOMContentLoaded.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+XI. CRITICAL RULES — DO NOT VIOLATE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✗ NO gradient buttons
+✗ NO heavy box shadows on everything
+✗ NO serif fonts
+✗ NO carousel/slider in hero
+✗ NO hamburger menu visible on desktop
+✗ NO more than 2 font sizes per section
+✗ NO decorative background patterns
+✗ NO background-attachment: fixed (kills mobile performance — use scroll)
+✗ NO @import for fonts in CSS (use HTML <link> with preconnect instead)
+✗ NO hardcoded year in copyright — use JavaScript Date()
+✗ NO emoji or generic icon in the logo — use the specified SVG text + curve design
+✗ DO NOT use display:none/flex to toggle the mobile menu — use max-height + opacity transition
+✗ DO NOT link "Contact" menu items to index.html#contact — always use contact.html
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+XII. IMAGES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Prefer generated or locally saved images over unreliable third-party URLs.
+- If an Unsplash/Pexels URL is used and the image fails to load, generate and save
+  a replacement image locally (e.g. clinic-interior.png).
+- All images must have:
+    - Descriptive alt text (for SEO + accessibility)
+    - Explicit width and height attributes (to prevent layout shift / CLS)
+    - loading="lazy" for below-the-fold images
+
+Search terms for reference images:
+  "modern dental clinic interior"
+  "female dentist professional portrait"
+  "dental patient smiling"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+XIII. DEPLOYMENT (Netlify recommended)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+The site should be deployable to Netlify with zero configuration:
+  - Contact form uses data-netlify="true" — Netlify auto-processes it.
+  - No build step needed. Push to GitHub and import in Netlify dashboard.
+  - Canonical URLs should reflect the final deployed domain, not localhost.
